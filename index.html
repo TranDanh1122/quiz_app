@@ -10,49 +10,50 @@
   <title>Frontend Mentor | Frontend quiz app</title>
 </head>
 
-<body night>
+<body >
   <header question class="container">
-    <div class="day_night">
-      <div class="sun"></div>
-      <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-      </label>
-      <div class="moon"></div>
-    </div>
     <div class="question_type">
       <div accessibility class="img_box">
         <img src="./starter-code/assets/images/icon-accessibility.svg" alt="icon-accessibility">
       </div>
       <span>Accessibility</span>
     </div>
+    <div class="day_night">
+      <div class="sun"></div>
+      <label class="switch">
+        <input tabindex="0" type="checkbox" id="lightdark">
+        <span class="slider round"></span>
+      </label>
+      <div class="moon"></div>
+    </div>
+
   </header>
-  <main class="container">
+  <main answer class="container">
     <div question class="card">
       <div class="card_header">
         <h1> Welcome to the <strong>Frontend Quiz!</strong></h1>
         <span> Pick a subject to get started.</span>
       </div>
       <div class="card_body">
-        <div class="option">
+        <div tabindex="0" class="option">
           <div html class="img_box">
             <img src="./starter-code/assets/images/icon-html.svg" alt="html">
           </div>
           <h2>HTML</h2>
         </div>
-        <div class="option">
+        <div tabindex="0" class="option">
           <div css class="img_box">
             <img src="./starter-code/assets/images/icon-css.svg" alt="css">
           </div>
           <h2>CSS</h2>
         </div>
-        <div class="option">
+        <div tabindex="0" class="option">
           <div javaScript class="img_box">
             <img src="./starter-code/assets/images/icon-js.svg" alt="JavaScript">
           </div>
           <h2>JavaScript</h2>
         </div>
-        <div class="option">
+        <div tabindex="0" class="option">
           <div accessibility class="img_box">
             <img src="./starter-code/assets/images/icon-accessibility.svg" alt="Accessibility">
           </div>
@@ -68,8 +69,8 @@
         </h1>
         <input type="range" id="proccess" class="proccess">
       </div>
-      <div class="card_body">
-        <div correct class="option">
+      <div  class="card_body">
+        <div tabindex="0" correct class="option">
           <span class="option_item">A</span>
           <h2>4.5 : 1</h2>
           <div class="icon">
@@ -77,7 +78,7 @@
             <img src="./starter-code/assets/images/icon-error.svg" class="error" alt="">
           </div>
         </div>
-        <div re_correct class="option">
+        <div tabindex="0" re_correct class="option">
           <span class="option_item">B</span>
           <h2>3 : 1 </h2>
           <div class="icon">
@@ -85,7 +86,7 @@
             <img src="./starter-code/assets/images/icon-error.svg" class="error" alt="">
           </div>
         </div>
-        <div in_correct class="option">
+        <div tabindex="0" in_correct class="option">
           <span class="option_item">C</span>
           <h2>2.5 : 1</h2>
           <div class="icon">
@@ -93,7 +94,7 @@
             <img src="./starter-code/assets/images/icon-error.svg" class="error" alt="">
           </div>
         </div>
-        <div selected class="option">
+        <div tabindex="0" selected class="option">
           <span class="option_item">D</span>
           <h2>5 : 1</h2>
           <div class="icon">
@@ -101,13 +102,14 @@
             <img src="./starter-code/assets/images/icon-error.svg" class="error" alt="">
           </div>
         </div>
-      </div>
-      <div error class="card_footer">
-        <div submit class="submit_answer">
-          Submit Answer
+        <div class="card_footer">
+          <div tabindex="0" submit class="submit_answer">
+            Submit Answer
+          </div>
+          <span><img src="./starter-code/assets/images/icon-error.svg" alt="">Please select an answer</span>
         </div>
-        <span><img src="./starter-code/assets/images/icon-error.svg" alt="">Please select an answer</span>
       </div>
+
     </div>
 
     <div submit class="card">
@@ -115,22 +117,26 @@
         <h1>Quiz completed <strong>You scored...</strong></h1>
       </div>
       <div class="card_body">
-        <div class="question_type">
-          <img src="./starter-code/assets/images/icon-accessibility.svg" alt="icon-accessibility">
-          <span>Accessibility</span>
+        <div class="content">
+          <div class="question_type">
+            <div accessibility class="img_box">
+              <img src="./starter-code/assets/images/icon-accessibility.svg" alt="icon-accessibility">
+            </div>
+            <span>Accessibility</span>
+          </div>
+          <h2 class="scored">8</h2>
+          <span class="total_scrored">out of 10</span>
         </div>
-        <h2 class="scored">8</h2>
-        <span class="total_scrored">out of 10</span>
-      </div>
-      <div class="card_footer">
-        <div play_again class="submit_answer">
-          Play Again
+        <div class="card_footer">
+          <div tabindex="0" play_again class="submit_answer">
+            Play Again
+          </div>
         </div>
       </div>
-    </div>
 
   </main>
-
+    <script src="./vendor/lightdark/lightdark.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
