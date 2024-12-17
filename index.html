@@ -6,19 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-
+  <link rel="stylesheet" href="./styles.css">
   <title>Frontend Mentor | Frontend quiz app</title>
 </head>
 
-<body>
-  <header question>
-    <input type="range" id="day_night">
+<body night>
+  <header question class="container">
+    <div class="day_night">
+      <div class="sun"></div>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+      <div class="moon"></div>
+    </div>
     <div class="question_type">
-      <img src="./starter-code/assets/images/icon-accessibility.svg" alt="icon-accessibility">
+      <div accessibility class="img_box">
+        <img src="./starter-code/assets/images/icon-accessibility.svg" alt="icon-accessibility">
+      </div>
       <span>Accessibility</span>
     </div>
   </header>
-  <main>
+  <main class="container">
     <div question class="card">
       <div class="card_header">
         <h1> Welcome to the <strong>Frontend Quiz!</strong></h1>
@@ -26,19 +35,27 @@
       </div>
       <div class="card_body">
         <div class="option">
-          <img src="./starter-code/assets/images/icon-html.svg" alt="html">
+          <div html class="img_box">
+            <img src="./starter-code/assets/images/icon-html.svg" alt="html">
+          </div>
           <h2>HTML</h2>
         </div>
         <div class="option">
-          <img src="./starter-code/assets/images/icon-css.svg" alt="css">
+          <div css class="img_box">
+            <img src="./starter-code/assets/images/icon-css.svg" alt="css">
+          </div>
           <h2>CSS</h2>
         </div>
         <div class="option">
-          <img src="./starter-code/assets/images/icon-js.svg" alt="JavaScript">
+          <div javaScript class="img_box">
+            <img src="./starter-code/assets/images/icon-js.svg" alt="JavaScript">
+          </div>
           <h2>JavaScript</h2>
         </div>
         <div class="option">
-          <img src="./starter-code/assets/images/icon-accessibility.svg" alt="Accessibility">
+          <div accessibility class="img_box">
+            <img src="./starter-code/assets/images/icon-accessibility.svg" alt="Accessibility">
+          </div>
           <h2>Accessibility</h2>
         </div>
       </div>
@@ -53,35 +70,35 @@
       </div>
       <div class="card_body">
         <div correct class="option">
-          <span>A</span>
+          <span class="option_item">A</span>
           <h2>4.5 : 1</h2>
           <div class="icon">
             <img src="./starter-code/assets/images/icon-correct.svg" class="correct" alt="">
-            <img src="./starter-code/assets/images/icon-error.svg" class="correct" alt="">
+            <img src="./starter-code/assets/images/icon-error.svg" class="error" alt="">
           </div>
         </div>
         <div re_correct class="option">
-          <span>B</span>
+          <span class="option_item">B</span>
           <h2>3 : 1 </h2>
           <div class="icon">
             <img src="./starter-code/assets/images/icon-correct.svg" class="correct" alt="">
-            <img src="./starter-code/assets/images/icon-error.svg" class="correct" alt="">
+            <img src="./starter-code/assets/images/icon-error.svg" class="error" alt="">
           </div>
         </div>
         <div in_correct class="option">
-          <span>C</span>
+          <span class="option_item">C</span>
           <h2>2.5 : 1</h2>
           <div class="icon">
             <img src="./starter-code/assets/images/icon-correct.svg" class="correct" alt="">
-            <img src="./starter-code/assets/images/icon-error.svg" class="correct" alt="">
+            <img src="./starter-code/assets/images/icon-error.svg" class="error" alt="">
           </div>
         </div>
-        <div class="option">
-          <span>D</span>
+        <div selected class="option">
+          <span class="option_item">D</span>
           <h2>5 : 1</h2>
           <div class="icon">
             <img src="./starter-code/assets/images/icon-correct.svg" class="correct" alt="">
-            <img src="./starter-code/assets/images/icon-error.svg" class="correct" alt="">
+            <img src="./starter-code/assets/images/icon-error.svg" class="error" alt="">
           </div>
         </div>
       </div>
