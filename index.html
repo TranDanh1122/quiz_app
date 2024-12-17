@@ -1,48 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Frontend quiz app</title>
 </head>
+
 <body>
+  <header question>
+    <input type="range" id="day_night">
+    <div class="question_type">
+      <img src="./starter-code/assets/images/icon-accessibility.svg" alt="icon-accessibility">
+      <span>Accessibility</span>
+    </div>
+  </header>
+  <main>
+    <div question class="card">
+      <div class="card_header">
+        <h1> Welcome to the <strong>Frontend Quiz!</strong></h1>
+        <span> Pick a subject to get started.</span>
+      </div>
+      <div class="card_body">
+        <div class="option">
+          <img src="./starter-code/assets/images/icon-html.svg" alt="html">
+          <h2>HTML</h2>
+        </div>
+        <div class="option">
+          <img src="./starter-code/assets/images/icon-css.svg" alt="css">
+          <h2>CSS</h2>
+        </div>
+        <div class="option">
+          <img src="./starter-code/assets/images/icon-js.svg" alt="JavaScript">
+          <h2>JavaScript</h2>
+        </div>
+        <div class="option">
+          <img src="./starter-code/assets/images/icon-accessibility.svg" alt="Accessibility">
+          <h2>Accessibility</h2>
+        </div>
+      </div>
+    </div>
 
-  <!-- Quiz menu start -->
+    <div answer class="card">
+      <div class="card_header">
+        <span>Question <span id="current">6</span> of <span id="total">10</span></span>
+        <h1> Which of these color contrast ratios defines the minimum WCAG 2.1 Level AA requirement for normal text?
+        </h1>
+        <input type="range" id="proccess" class="proccess">
+      </div>
+      <div class="card_body">
+        <div correct class="option">
+          <span>A</span>
+          <h2>4.5 : 1</h2>
+          <div class="icon">
+            <img src="./starter-code/assets/images/icon-correct.svg" class="correct" alt="">
+            <img src="./starter-code/assets/images/icon-error.svg" class="correct" alt="">
+          </div>
+        </div>
+        <div re_correct class="option">
+          <span>B</span>
+          <h2>3 : 1 </h2>
+          <div class="icon">
+            <img src="./starter-code/assets/images/icon-correct.svg" class="correct" alt="">
+            <img src="./starter-code/assets/images/icon-error.svg" class="correct" alt="">
+          </div>
+        </div>
+        <div in_correct class="option">
+          <span>C</span>
+          <h2>2.5 : 1</h2>
+          <div class="icon">
+            <img src="./starter-code/assets/images/icon-correct.svg" class="correct" alt="">
+            <img src="./starter-code/assets/images/icon-error.svg" class="correct" alt="">
+          </div>
+        </div>
+        <div class="option">
+          <span>D</span>
+          <h2>5 : 1</h2>
+          <div class="icon">
+            <img src="./starter-code/assets/images/icon-correct.svg" class="correct" alt="">
+            <img src="./starter-code/assets/images/icon-error.svg" class="correct" alt="">
+          </div>
+        </div>
+      </div>
+      <div error class="card_footer">
+        <div submit class="submit_answer">
+          Submit Answer
+        </div>
+        <span><img src="./starter-code/assets/images/icon-error.svg" alt="">Please select an answer</span>
+      </div>
+    </div>
 
-  Welcome to the Frontend Quiz!
-  Pick a subject to get started.
+    <div submit class="card">
+      <div class="card_header">
+        <h1>Quiz completed <strong>You scored...</strong></h1>
+      </div>
+      <div class="card_body">
+        <div class="question_type">
+          <img src="./starter-code/assets/images/icon-accessibility.svg" alt="icon-accessibility">
+          <span>Accessibility</span>
+        </div>
+        <h2 class="scored">8</h2>
+        <span class="total_scrored">out of 10</span>
+      </div>
+      <div class="card_footer">
+        <div play_again class="submit_answer">
+          Play Again
+        </div>
+      </div>
+    </div>
 
-  HTML
-  CSS
-  JavaScript
-  Accessibility
-
-  <!-- Quiz menu end -->
-
-  <!-- Quiz question start -->
-
-  Question <!-- number --> of 10
-
-  A
-  B
-  C
-  D
-
-  Submit answer
-
-  <!-- Quiz question end -->
-
-  <!-- Quiz completed start -->
-
-  Quiz completed
-  You scored...
-
-  <!-- score --> out of 10
-
-  <!-- Quiz completed end -->
+  </main>
 
 </body>
+
 </html>
