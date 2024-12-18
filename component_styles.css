@@ -2,7 +2,7 @@
 
 
 
-.question_type {
+.topic_type {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,7 +12,7 @@
     font-weight: 500;
 }
 
-body[night] .question_type {
+body[night] .topic_type {
     color: var(--white);
 }
 
@@ -25,19 +25,19 @@ body[night] .question_type {
     border-radius: .5rem;
 }
 
-.img_box[accessibility] {
+.img_box[type="accessibility"] {
     background-color: var(--light_purple);
 }
 
-.img_box[html] {
+.img_box[type="html"] {
     background-color: var(--light_red);
 }
 
-.img_box[css] {
+.img_box[type="css"] {
     background-color: var(--light_green);
 }
 
-.img_box[javaScript] {
+.img_box[type="javaScript"] {
     background-color: var(--light_blue);
 }
 
@@ -66,66 +66,70 @@ body[night] .question_type {
     cursor: pointer;
     color: var(--gray_navy);
 }
-body[night] .option { 
+
+body[night] .option {
     color: var(--white);
     background-color: var(--navy);
 }
+
 .option:hover .option_item {
     background-color: var(--light_purple);
     color: var(--purple);
 }
 
 .option h2 {
-    font-size: 1.75rem; 
+    font-size: 1.75rem;
     color: var(--dark_navy);
 }
-body[night] .option h2 { 
+
+body[night] .option h2 {
     color: var(--white);
 }
+
 .option .icon {
     margin-left: auto;
     display: none;
 }
 
-.option[selected] {
+.option[state="selected"] {
     border: 3px solid var(--purple);
 }
 
-.option[selected] .option_item {
+.option[state="selected"] .option_item {
     background-color: var(--purple);
     color: var(--white);
 }
 
-.option[correct] {
+.option[state="correct"] {
     border: 3px solid var(--green);
 }
 
-.option[correct] .option_item {
+.option[state="correct"] .option_item {
     color: var(--white);
     background-color: var(--green);
 }
 
-.option[correct] .icon,
-.option[re_correct] .icon,
-.option[in_correct] .icon {
+.option[state="correct"] .icon,
+.option[state="re_correct"] .icon,
+.option[state="in_correct"] .icon {
     display: block;
 }
 
-.option[correct] .icon .error,
-.option[re_correct] .icon .error {
+.option[state="correct"] .icon .error,
+.option[state="re_correct"] .icon .error {
     display: none;
 }
 
-.option[in_correct] {
+.option[state="in_correct"] {
     border: 3px solid var(--red);
 }
 
-.option[in_correct] .option_item {
+.option[state="in_correct"] .option_item {
     color: var(--white);
     background-color: var(--red);
 }
 
-.option[in_correct] .icon .correct {
+.option[state="in_correct"] .icon .correct {
     display: none;
 }
 
@@ -139,6 +143,7 @@ body[night] .option h2 {
     border-radius: 1rem;
     cursor: pointer;
 }
+
 .submit_answer:hover {
     background-color: var(--light_purple);
 }
@@ -151,9 +156,11 @@ input[type="range"] {
     height: .5rem;
     outline: none;
 }
-body[night]  input[type="range"] {
+
+body[night] input[type="range"] {
     background: linear-gradient(to right, var(--purple) 50%, var(--gray_navy) 50%);
 }
+
 input[type="range"]:focus {
     outline: none;
 }

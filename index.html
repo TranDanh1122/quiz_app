@@ -10,9 +10,9 @@
   <title>Frontend Mentor | Frontend quiz app</title>
 </head>
 
-<body >
-  <header question class="container">
-    <div class="question_type">
+<body id="body">
+  <header  id="header" topic class="container">
+    <div id="header_topic" class="topic_type">
       <div accessibility class="img_box">
         <img src="./starter-code/assets/images/icon-accessibility.svg" alt="icon-accessibility">
       </div>
@@ -26,35 +26,34 @@
       </label>
       <div class="moon"></div>
     </div>
-
   </header>
-  <main answer class="container">
-    <div question class="card">
+  <main type="topic" id="main" class="container">
+    <div topic class="card">
       <div class="card_header">
         <h1> Welcome to the <strong>Frontend Quiz!</strong></h1>
         <span> Pick a subject to get started.</span>
       </div>
-      <div class="card_body">
+      <div id="topics" class="card_body">
         <div tabindex="0" class="option">
-          <div html class="img_box">
+          <div type="html" class="img_box">
             <img src="./starter-code/assets/images/icon-html.svg" alt="html">
           </div>
           <h2>HTML</h2>
         </div>
         <div tabindex="0" class="option">
-          <div css class="img_box">
+          <div type="css" class="img_box">
             <img src="./starter-code/assets/images/icon-css.svg" alt="css">
           </div>
           <h2>CSS</h2>
         </div>
         <div tabindex="0" class="option">
-          <div javaScript class="img_box">
+          <div type="javaScript" class="img_box">
             <img src="./starter-code/assets/images/icon-js.svg" alt="JavaScript">
           </div>
           <h2>JavaScript</h2>
         </div>
         <div tabindex="0" class="option">
-          <div accessibility class="img_box">
+          <div type="accessibility" class="img_box">
             <img src="./starter-code/assets/images/icon-accessibility.svg" alt="Accessibility">
           </div>
           <h2>Accessibility</h2>
@@ -63,53 +62,54 @@
     </div>
 
     <div answer class="card">
-      <div class="card_header">
+      <div id="question" class="card_header">
         <span>Question <span id="current">6</span> of <span id="total">10</span></span>
         <h1> Which of these color contrast ratios defines the minimum WCAG 2.1 Level AA requirement for normal text?
         </h1>
         <input type="range" id="proccess" class="proccess">
       </div>
       <div  class="card_body">
-        <div tabindex="0" correct class="option">
-          <span class="option_item">A</span>
-          <h2>4.5 : 1</h2>
-          <div class="icon">
-            <img src="./starter-code/assets/images/icon-correct.svg" class="correct" alt="">
-            <img src="./starter-code/assets/images/icon-error.svg" class="error" alt="">
+        <div id="answers" submited class="options">
+          <div tabindex="0" state="correct" class="option">
+            <span class="option_item">A</span>
+            <h2>4.5 : 1</h2>
+            <div class="icon">
+              <img src="./starter-code/assets/images/icon-correct.svg" class="correct" alt="">
+              <img src="./starter-code/assets/images/icon-error.svg" class="error" alt="">
+            </div>
           </div>
-        </div>
-        <div tabindex="0" re_correct class="option">
-          <span class="option_item">B</span>
-          <h2>3 : 1 </h2>
-          <div class="icon">
-            <img src="./starter-code/assets/images/icon-correct.svg" class="correct" alt="">
-            <img src="./starter-code/assets/images/icon-error.svg" class="error" alt="">
+          <div tabindex="0" state="re_correct" class="option">
+            <span class="option_item">B</span>
+            <h2>3 : 1 </h2>
+            <div class="icon">
+              <img src="./starter-code/assets/images/icon-correct.svg" class="correct" alt="">
+              <img src="./starter-code/assets/images/icon-error.svg" class="error" alt="">
+            </div>
           </div>
-        </div>
-        <div tabindex="0" in_correct class="option">
-          <span class="option_item">C</span>
-          <h2>2.5 : 1</h2>
-          <div class="icon">
-            <img src="./starter-code/assets/images/icon-correct.svg" class="correct" alt="">
-            <img src="./starter-code/assets/images/icon-error.svg" class="error" alt="">
+          <div tabindex="0" state="in_correct" class="option">
+            <span class="option_item">C</span>
+            <h2>2.5 : 1</h2>
+            <div class="icon">
+              <img src="./starter-code/assets/images/icon-correct.svg" class="correct" alt="">
+              <img src="./starter-code/assets/images/icon-error.svg" class="error" alt="">
+            </div>
           </div>
-        </div>
-        <div tabindex="0" selected class="option">
-          <span class="option_item">D</span>
-          <h2>5 : 1</h2>
-          <div class="icon">
-            <img src="./starter-code/assets/images/icon-correct.svg" class="correct" alt="">
-            <img src="./starter-code/assets/images/icon-error.svg" class="error" alt="">
+          <div tabindex="0" state="selected" class="option">
+            <span class="option_item">D</span>
+            <h2>5 : 1</h2>
+            <div class="icon">
+              <img src="./starter-code/assets/images/icon-correct.svg" class="correct" alt="">
+              <img src="./starter-code/assets/images/icon-error.svg" class="error" alt="">
+            </div>
           </div>
         </div>
         <div class="card_footer">
-          <div tabindex="0" submit class="submit_answer">
+          <div tabindex="0" state="waiting_submit" class="submit_answer">
             Submit Answer
           </div>
           <span><img src="./starter-code/assets/images/icon-error.svg" alt="">Please select an answer</span>
         </div>
       </div>
-
     </div>
 
     <div submit class="card">
@@ -117,8 +117,8 @@
         <h1>Quiz completed <strong>You scored...</strong></h1>
       </div>
       <div class="card_body">
-        <div class="content">
-          <div class="question_type">
+        <div id="end_content" class="content">
+          <div class="topic_type">
             <div accessibility class="img_box">
               <img src="./starter-code/assets/images/icon-accessibility.svg" alt="icon-accessibility">
             </div>
@@ -135,8 +135,8 @@
       </div>
 
   </main>
-    <script src="./vendor/lightdark/lightdark.js"></script>
-    <script src="./script.js"></script>
+  <script src="./vendor/lightdark/lightdark.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>

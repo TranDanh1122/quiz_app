@@ -76,11 +76,11 @@ header {
     margin-bottom: 6rem !important;
 }
 
-header[question] .question_type {
+header[topic] .topic_type {
     display: none;
 }
 
-header[question] {
+header[topic] {
     justify-content: flex-end;
 }
 
@@ -91,15 +91,15 @@ header[question] {
     display: none;
 }
 
-main[question] .card[question] {
+main[type="topic"] .card[topic] {
     display: flex;
 }
 
-main[answer] .card[answer] {
+main[type="answer"] .card[answer] {
     display: flex;
 }
 
-main[submit] .card[submit] {
+main[type="submit"] .card[submit] {
     display: flex;
 }
 
@@ -145,6 +145,11 @@ main[submit] .card[submit] {
     flex-flow: column nowrap;
     gap: 1.5rem
 }
+.options {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+}
 
 .card_footer {
     margin-top: 1rem;
@@ -155,14 +160,14 @@ main[submit] .card[submit] {
     display: none;
 }
 
-.card_footer[error] {
+.card_footer:has(.submit_answer[state="error"]) {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     gap: 1rem;
 }
 
-.card_footer[error] span {
+.card_footer:has(.submit_answer[state="error"]) span {
     display: flex;
     align-items: center;
     justify-content: center;
